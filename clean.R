@@ -15,4 +15,6 @@ clean_data$Street.2 = iconv(clean_data$Street.2, "latin1", "ASCII", sub="")
 clean_data$Area = sub("^$", "Unknown", clean_data$Area)
 clean_data$Street.2 = trimws(clean_data$Street.2)
 clean_data = unique(clean_data)
+
+# write clean data
 write.csv(clean_data, file = "clean_data.csv")
