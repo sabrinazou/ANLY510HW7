@@ -1,5 +1,9 @@
+
+# read dirty data
 dirty_data = read.csv("dirty_data.csv")
 myvars <- names(dirty_data)%in%c("Street", "Strange.HTML")
+
+# clean data 
 clean_data = dirty_data[!myvars]
 library(stringi)
 clean_data$Street.2 = stri_trans_totitle(clean_data$Street.2)
